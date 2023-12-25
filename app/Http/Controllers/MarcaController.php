@@ -10,7 +10,7 @@ class MarcaController extends Controller
 
     public function index()
     {
-        //
+        return Marca::all();
     }
 
 
@@ -26,9 +26,9 @@ class MarcaController extends Controller
     }
 
 
-    public function show(Marca $marca)
+    public function show(Marca $marca): Marca
     {
-        //
+        return $marca;
     }
 
 
