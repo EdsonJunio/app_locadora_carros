@@ -8,9 +8,15 @@ use Illuminate\Http\Request;
 class MarcaController extends Controller
 {
 
+    public function __construct(Marca $marca)
+    {
+        $this->marca = $marca;
+    }
+
     public function index()
     {
-        return Marca::all();
+        $marcas = $this->marca->all();
+        return $marcas;
     }
 
 
@@ -22,12 +28,14 @@ class MarcaController extends Controller
 
     public function store(Request $request)
     {
-        return Marca::create($request->all());
+        $marca = $this->marca->create($request->all());
+        return $marca;
     }
 
 
-    public function show(Marca $marca): Marca
+    public function show($id)
     {
+        $marca =  $this->marca->find($id);
         return $marca;
     }
 
@@ -38,15 +46,17 @@ class MarcaController extends Controller
     }
 
 
-    public function update(Request $request, Marca $marca)
+    public function update(Request $request, $id)
     {
+        $marca = $this->marca->find($id);
         $marca->update($request->all());
         return $marca;
     }
 
 
-    public function destroy(Marca $marca)
+    public function destroy($id)
     {
+        $marca = $this->marca->find($id);
         $marca->delete();
        return ['msg' => 'A marca foi removida com sucesso'];
     }
