@@ -4,13 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Models\Modelo;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class ModeloController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return void
      */
     public function index()
     {
@@ -20,7 +21,7 @@ class ModeloController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return void
      */
     public function create()
     {
@@ -30,8 +31,8 @@ class ModeloController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return void
      */
     public function store(Request $request)
     {
@@ -41,8 +42,8 @@ class ModeloController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Modelo  $modelo
-     * @return \Illuminate\Http\Response
+     * @param Modelo $modelo
+     * @return void
      */
     public function show(Modelo $modelo)
     {
@@ -52,8 +53,8 @@ class ModeloController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Modelo  $modelo
-     * @return \Illuminate\Http\Response
+     * @param Modelo $modelo
+     * @return void
      */
     public function edit(Modelo $modelo)
     {
@@ -63,9 +64,9 @@ class ModeloController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Modelo  $modelo
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @param Modelo $modelo
+     * @return void
      */
     public function update(Request $request, Modelo $modelo)
     {
@@ -75,8 +76,8 @@ class ModeloController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Modelo  $modelo
-     * @return \Illuminate\Http\Response
+     * @param Modelo $modelo
+     * @return void
      */
     public function destroy(Modelo $modelo)
     {
