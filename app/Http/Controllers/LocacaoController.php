@@ -5,13 +5,14 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreLocacaoRequest;
 use App\Http\Requests\UpdateLocacaoRequest;
 use App\Models\Locacao;
+use Illuminate\Http\Response;
 
 class LocacaoController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return void
      */
     public function index()
     {
@@ -21,7 +22,7 @@ class LocacaoController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return void
      */
     public function create()
     {
@@ -31,8 +32,8 @@ class LocacaoController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreLocacaoRequest  $request
-     * @return \Illuminate\Http\Response
+     * @param StoreLocacaoRequest $request
+     * @return void
      */
     public function store(StoreLocacaoRequest $request)
     {
@@ -42,8 +43,8 @@ class LocacaoController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Locacao  $locacao
-     * @return \Illuminate\Http\Response
+     * @param Locacao $locacao
+     * @return void
      */
     public function show(Locacao $locacao)
     {
@@ -53,8 +54,8 @@ class LocacaoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Locacao  $locacao
-     * @return \Illuminate\Http\Response
+     * @param Locacao $locacao
+     * @return void
      */
     public function edit(Locacao $locacao)
     {
@@ -64,9 +65,9 @@ class LocacaoController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateLocacaoRequest  $request
-     * @param  \App\Models\Locacao  $locacao
-     * @return \Illuminate\Http\Response
+     * @param UpdateLocacaoRequest $request
+     * @param Locacao $locacao
+     * @return void
      */
     public function update(UpdateLocacaoRequest $request, Locacao $locacao)
     {
@@ -76,8 +77,8 @@ class LocacaoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Locacao  $locacao
-     * @return \Illuminate\Http\Response
+     * @param Locacao $locacao
+     * @return void
      */
     public function destroy(Locacao $locacao)
     {
